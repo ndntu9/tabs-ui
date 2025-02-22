@@ -15,8 +15,10 @@ tabBtns.forEach((tabBtn, index) => {
     tabBtn.onclick = function () {
         $('.tab__btn.active').classList.remove('active');
         $('.tab__content.active').classList.remove('active');
+
         this.classList.add('active');
         tabContents[index].classList.add('active');
+
         tabLine.style.background = lineColors[index];
         tabLine.style.width = this.clientWidth * 0.8 + 'px';
         tabLine.style.left = this.offsetLeft + 'px';
